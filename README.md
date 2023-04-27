@@ -1,18 +1,18 @@
 # trillion-integration-sdk
 
-With checkJewelryExist method you can check if jewelryId exist in our database and then use it for setJewelryId method.
+With checkJewelryExist method you can check if jewelryId exist in our database and then use it for setJewelryId method./n/n
 
-You need to create an empty div element for widget initialization. For example:
-<div id="trillion-widget"></div>
+You need to create an empty div element for widget initialization. For example:/n/n
+<div id="trillion-widget"></div>/n
 
-import {TrillionWidgetApp} from "trillion-widget"
+import {TrillionWidgetApp} from "trillion-widget"/n
 
-const elem = document.getElementById('trillion-widget')
-const trillionWidget = new TrillionWidgetApp()
-trillionViewer.init(elem)
-trillionWidget.setJewelryID('jewelryId')
-trillionWidget.setJewelryType('necklace')
-trillionWidget.refresh()
+const elem = document.getElementById('trillion-widget')/n
+const trillionWidget = new TrillionWidgetApp()/n
+trillionViewer.init(elem)/n
+trillionWidget.setJewelryID('jewelryId')/n
+trillionWidget.setJewelryType('necklace')/n
+trillionWidget.refresh()/n/n
 
 For more methods please visit our library package page - https://www.npmjs.com/package/trillion-widget
 
