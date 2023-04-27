@@ -1,8 +1,9 @@
-function jewelryExists(jewelryId) {
+export function jewelryExists(jewelryId) {
+    console.log(jewelryId)
     const data = {
         "data": { id: jewelryId }
     };
-    fetch(`https://us-central1-trillionprod.cloudfunctions.net/jewelryExists`, {
+     return fetch(`https://us-central1-trillionprod.cloudfunctions.net/jewelryExists`, {
         method: "POST",
         mode: "cors",
         headers: {
@@ -16,8 +17,6 @@ function jewelryExists(jewelryId) {
             return response.json();
         })
         .then(data => {
-            if (data.result) {
-                return true
-            }
+            return data.result
         })
 }
