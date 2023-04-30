@@ -1,22 +1,7 @@
-export function jewelryExists(jewelryId) {
-    console.log(jewelryId)
-    const data = {
-        "data": { id: jewelryId }
-    };
-     return fetch(`https://us-central1-trillionprod.cloudfunctions.net/jewelryExists`, {
-        method: "POST",
-        mode: "cors",
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Cache-Control": "no-cache"
-        },
-        body: JSON.stringify(data),
+export async function jewelryExists(jewelryId) {
+    const response = await fetch(`https://dashboard.trillion.jewelry:8001/trillionwebapp/publication-status/${jewelryId}`, {
+        method: "GET",
     })
-        .then(response => {
-            return response.json();
-        })
-        .then(data => {
-            return data.result
-        })
+    const data = await response.json();    
+    return data.isPublishedWebSDK;
 }
