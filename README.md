@@ -11,7 +11,6 @@ const elem = document.getElementById('trillion-widget')<br>
 const trillionWidget = new TrillionWidgetApp()<br><br>
 trillionViewer.init(elem)<br>
 trillionWidget.setJewelryID('jewelryId')<br>
-trillionWidget.setJewelryType('necklace')<br>
 trillionWidget.refresh()<br>
 
 For more methods please visit our library package page - https://www.npmjs.com/package/trillion-widget
